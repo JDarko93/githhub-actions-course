@@ -6,6 +6,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
+        # 0. Checkout the code from the repository
         # 1. Install dependencies of our reach application
         # 2. Execute automated test
 
