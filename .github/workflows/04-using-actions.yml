@@ -1,0 +1,11 @@
+name: 04 - Using actions
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        # 1. Install dependencies of our reach application
+        # 2. Execute automated test
+
