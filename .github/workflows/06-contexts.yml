@@ -1,8 +1,8 @@
 name: 06 - Contexts
 run-name: 06 Contet | DEBUG - ${{inputs.debug}}
 on: 
-    push:
     workflow_dispatch:
+
         inputs:
             debug:
                 type: boolean
