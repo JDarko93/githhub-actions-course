@@ -1,0 +1,9 @@
+name: Using Expressions
+
+on:
+    push:
+    workflow_dispatch:
+
+        jobs:
+            debug:
+                Boolean: 'false'
