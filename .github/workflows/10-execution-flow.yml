@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Running unit tests
-          run: Echo "Running tests"
+          run: echo "Running tests"
         - name: Failing tests
-          if: ${{!inputs.pass-unit-tests}}
+          if: ${{inputs.pass-unit-tests}}
           run: exit 1
   deploy-nonprod:
     runs-on: ubuntu-latest
@@ -51,4 +51,4 @@ jobs:
       - load-tests
     steps:
       - name: Deploying to prod
-        run: ecoh "Deploying to prod..."
+        run: echo "Deploying to prod..."
