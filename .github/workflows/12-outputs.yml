@@ -1,4 +1,4 @@
-name: Working with outputs
+name: 12 - Working with outputs
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
 
 jobs: 
     build:
-      runs-on: ubuntu latest
+      runs-on: ubuntu-latest
       outputs:
         build-status: ${{steps.build.output.status}}
       steps:
@@ -28,4 +28,4 @@ jobs:
       steps:
           - name: Deploy
             run: echo "Deploying"
-            
+
