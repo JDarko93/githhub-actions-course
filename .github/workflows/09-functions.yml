@@ -1,4 +1,4 @@
-name: 09 Using functions
+name: 09-Using functions
 
 on:
     pull_request:
