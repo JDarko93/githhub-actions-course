@@ -27,6 +27,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         environment: ${{inputs.target}}
+        needs: build
         steps:
             - name: Deploy
               run: echo "Deploying to ${{inputs.tag}}"
