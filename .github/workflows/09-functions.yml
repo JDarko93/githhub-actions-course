@@ -1,19 +1,26 @@
 name: 09-Using functions
 
 on:
-    pull_request:
     workflow_dispatch:
 
 jobs:
     echo1:
         runs-on: ubuntu-latest
         steps:
-            - name: Failing step
-              run: exit 1
-            - name: I will be skipped
+            - name: Print PR title
+              run: echo "${{github.event.pull_request.title}}
+            - name: Print PR lables
+              run: |
+                cat << EOF
+                ${{toJSON(github.event.pull_request.title)}}
+                EOF
+            - name: Bug step
+              if: ${{!cancelled() && contains (github.event.pull_request.title, 'fix')}}
+              run: echo "I am a bug fix"
+            - name: I will execute
               if: ${{success()}}
               run: echo "I will print if previous steps succeed "
-            - name: I will execute
+            - name: I will be skipped
               if: ${{failure()}}
               run: echo "I will print if any previous steps fail"
             - name: I will execute 
