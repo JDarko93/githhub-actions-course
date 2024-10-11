@@ -50,7 +50,7 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: ${{env.build-build-artifact-key}}
+          name: ${{env.build-artifact-key}}
           path: build
       - name: Show folder structure
         run: ls -R  
