@@ -1,5 +1,6 @@
 name: 16 - Working with environments
 
+run-name: 16 - Working with environments | env - ${{inputs.target-env}}
 on:
   workflow_dispatch:
     inputs:
@@ -16,4 +17,4 @@ jobs:
         steps:
           - name: Echo vars
             run: |
-              echo "env variable": ${{env.my-env-value}}
+                          echo "env variable": ${{env.my-env-value}}
