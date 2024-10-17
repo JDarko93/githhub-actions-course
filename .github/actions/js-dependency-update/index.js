@@ -77,7 +77,6 @@ async function run() {
       core.error('[js-dependency-update] : Something went wrong while creating PR. Check logs below.')
       core.setFailed(e.message);
       core.error(e);
-     
     }
   } else {
     core.info('[js-dependency-update] : No updates at this point in time.')
