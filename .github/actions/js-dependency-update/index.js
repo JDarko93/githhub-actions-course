@@ -47,18 +47,18 @@ async function run() {
 
   if (gitStatus.stdout.length > 0) {
     core.info('[js-dependency-update] : There are updates available!');
-    await exec.exec('git config --global user.name "gh-automation"');
-    await exec.exec('git config --global user.mail "gh-automation@email.com"');
-    await exec.exec('git checkout -b ${targetBranch}', [], {
+    await exec.exec(`git config --global user.name "gh-automation"`);
+    await exec.exec(`git config --global user.mail "gh-automation@email.com"`);
+    await exec.exec(`git checkout -b ${targetBranch}`, [], {
       ...commonExecOpts,
     });
-    await exec.exec('git add package.json package-lock.json', [], {
+    await exec.exec(`git add package.json package-lock.json`, [], {
       ...commonExecOpts,
     });
-    await exec.exec('git commit -m "chore: update dependencies"', [], {
+    await exec.exec(`git commit -m "chore: update dependencies"', [], {
       ...commonExecOpts,
     });
-    await exec.exec('git push -u origin ${targetBranch} --force', [], {
+    await exec.exec('git push -u origin ${targetBranch} --force`, [], {
       ...commonExecOpts,
     });
 
