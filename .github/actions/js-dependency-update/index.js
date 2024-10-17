@@ -102,7 +102,7 @@ async function run() {
       title: 'Update NPM dependencies',
       body: 'This pull request updates NPM packages',
       base: baseBranch,
-      head: headBranchBranch
+      head: headBranch,
       });
     } catch (e) {
       logger.error(
