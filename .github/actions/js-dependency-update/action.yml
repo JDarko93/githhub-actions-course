@@ -12,7 +12,6 @@ inputs:
     required: false
   working-directory: 
     description: Working directory for the project to check for dependency updates
-    default: working-dir
     required: true
   gh-token:
     description: Authentication token with repository access. Must have write access to contents and pulled requests
