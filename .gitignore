@@ -1,3 +1,5 @@
 
 .DS_Store
 !/.github/actions/**node_modules
+!/.github/actions/js-dependency-update
+
