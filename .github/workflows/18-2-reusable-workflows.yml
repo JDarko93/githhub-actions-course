@@ -5,10 +5,10 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/worksflows/18-1-reusable-workflows.yml
+    uses: ./.github/workflows/18-1-reusable-workflows.yml
     with:
       target-directory: dummy-dir
-    print-outputs:
+  print-outputs:
       runs-on: ubuntu-latest
       needs: deploy
       steps:
